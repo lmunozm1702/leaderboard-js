@@ -9,7 +9,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'API Leaderboard',
+      template: './src/index.html'
     }),
   ],
   output: {

@@ -1,3 +1,18 @@
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+#result-list {
+  border: 1px solid grey;
 }
