@@ -1,4 +1,4 @@
-import { defaults } from "lodash";
+import { defaults } from 'lodash'; // eslint-disable-line no-unused-vars
 
 class Scores {
   constructor(scoreList = []) {
@@ -6,7 +6,7 @@ class Scores {
   }
 
   add(fullName, score) {
-    let node = {};
+    const node = {};
     node.fullName = fullName;
     node.score = score;
     this.scoreList.push(node);

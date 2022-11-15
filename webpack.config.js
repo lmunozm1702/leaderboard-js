@@ -10,12 +10,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'API Leaderboard',
-      template: './src/index.html'
+      template: './src/index.html',
     }),
   ],
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
     clean: true,
   },
   module: {
