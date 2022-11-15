@@ -21,8 +21,6 @@
       </div>
       <div id="recent-main">
         <ul id="result-list">
-          <li>List 1</li>
-          <li>List 2</li>
         </ul>
       </div>
     </div>
@@ -30,17 +28,15 @@
       <div id="add-heder">
         <h2>Add your score</h2>
       </div>
-      <div class="flex-container flex-column" id="add-form">
-        <input type="text" name="full-name" placeholder="Your name" id="full-name">
-        <input type="text" name="score" placeholder="Your score" id="score">
-        <button type="submit" id="add-button">Sumbit</button>
+      <div id="add-form">
+        <form action="" name="scores-form" class="flex-container flex-column">
+          <input type="text" name="full-name" placeholder="Your name" id="full-name" required>
+          <input type="text" name="score" placeholder="Your score" id="score" required>
+          <button type="submit" id="add-button">Submit</button>
+        </form>
       </div>
     </div>
-    <div class="add-your-score">
-
-    </div>
   </div>
-  <script src="./index.js"></script>
 </body>
 
 </html>
