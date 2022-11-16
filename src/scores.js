@@ -1,20 +1,17 @@
 import { defaults } from 'lodash'; // eslint-disable-line no-unused-vars
+import { saveScoresApi } from './api-leaderboard.js';
 
 class Scores {
   constructor(scoreList = []) {
     this.scoreList = scoreList;
   }
 
-  add(fullName, score) {
+  async add(fullName, score) {
     const node = {};
     node.fullName = fullName;
     node.score = score;
     this.scoreList.push(node);
-    this.updateStorage();
-  }
-
-  updateStorage() {
-    localStorage.setItem('LeaderBoard', JSON.stringify(this.scoreList));
+    await saveScoresApi(node);
   }
 }
 
