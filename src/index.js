@@ -19,11 +19,11 @@ addButton.addEventListener('click', async (event) => {
 });
 
 refreshButton.addEventListener('click', async () => {
-  let savedScores = await getScoresApi();
+  const savedScores = await getScoresApi();
   renderList(savedScores.result, 'result-list');
 });
 
 window.addEventListener('load', async () => {
-  let savedScores = await getScoresApi();
+  const savedScores = await getScoresApi();
   renderList(savedScores.result, 'result-list');
 });
