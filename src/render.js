@@ -1,6 +1,6 @@
 import { defaults } from 'lodash'; // eslint-disable-line no-unused-vars
 
-function renderList(myList, tagId) {
+const renderList = (myList, tagId) => {
   const parentItem = document.querySelector(`#${tagId}`);
   parentItem.textContent = '';
   myList.forEach((scoreItem) => {

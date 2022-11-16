@@ -46,7 +46,7 @@ Using the refresh button you can load the data into the list.
 
 Not available yet.
 
-## Authors
+## Author
 
 ### 👤 Luis Muñoz
 
