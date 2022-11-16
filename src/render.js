@@ -8,6 +8,6 @@ const renderList = (myList, tagId) => {
     newElement.textContent = `${scoreItem.user}: ${scoreItem.score}`;
     parentItem.appendChild(newElement);
   });
-}
+};
 
 export default renderList;
