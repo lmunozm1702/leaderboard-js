@@ -1,12 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+}
+
+form,
+div {
+  width: 100%;
+}
+
+input {
+  width: 95%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: tomato;
+  background-color: white;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+button {
+  background-color: tomato;
+  border: 2px solid tomato;
+  border-radius: 4px;
+  padding: 2px 20px;
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+button:hover {
+  background-color: white;
+  color: tomato;
+}
+
+input[type='text'] {
+  border: 1px solid tomato;
+  border-radius: 4px;
+  padding: 5px 3px;
+  font-size: 1.6vw;
+  color: #645b5b;
+  font-weight: normal;
+}
+
+input::placeholder {
+  padding-left: 1vw;
 }
 
 .flex-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  gap: 3vw;
 }
 
 .flex-column {
@@ -14,5 +69,54 @@
 }
 
 #result-list {
-  border: 1px solid grey;
+  list-style: none;
+  padding: 5px 0;
+  font-size: 1vw;
+  color: #645b5b;
+}
+
+#main-title {
+  background-color: tomato;
+  color: white;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 20px;
+}
+
+#recent-header {
+  gap: 2vw;
+  padding-bottom: 3px;
+  border-bottom: 1px solid tomato;
+  align-items: center;
+}
+
+#add-form {
+  gap: 10px;
+}
+
+#add-score {
+  padding: 0 2vh 0 0;
+  gap: 5px;
+}
+
+#recent-scores {
+  padding: 0 0 0 2vh;
+}
+
+#refresh-div {
+  text-align: end;
+}
+
+.list-item {
+  padding: 2px 1vw;
+  font-size: 1.6vw;
+}
+
+.list-item:nth-child(2n + 1) {
+  background-color: #645b5b;
+  color: #fff;
+}
+
+#add-header {
+  margin-bottom: 5px;
+  align-items: center;
 }
