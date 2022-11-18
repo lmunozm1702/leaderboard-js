@@ -1,6 +1,6 @@
 import { defaults } from 'lodash'; // eslint-disable-line no-unused-vars
 import { saveScoresApi } from './api-leaderboard.js';
-import { renderErrorSubmit } from './render.js'
+import { renderErrorSubmit } from './render.js';
 
 class Scores {
   constructor(scoreList = []) {

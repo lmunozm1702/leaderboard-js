@@ -9,12 +9,12 @@ const getScoresApi = async () => {
       'access-control-allow-origin': '*',
       'Access-Control-Allow-Credentials': 'true',
     },
-  })
+  });
   if (response.ok) {
     const result = await response.json();
     return (result);
   }
-  console.error("GET: [ /scores/ ]", response);
+  console.error('GET: [ /scores/ ]', response);
   return (false);
 };
 
@@ -35,7 +35,7 @@ const saveScoresApi = async (data) => {
     const result = await response.json();
     return (result);
   }
-  console.error("POST: [ /scores/ ]", response);
+  console.error('POST: [ /scores/ ]', response);
   return (false);
 };
 

@@ -16,13 +16,13 @@ const renderErrorLoad = (tagId) => {
   parentItem.removeChild(parentItem.firstChild);
   const newElement = document.createElement('li');
   newElement.className = 'list-item';
-  newElement.textContent = `Ops!, we find an error, please tray again in a few minutes`;
+  newElement.textContent = 'Ops!, we find an error, please tray again in a few minutes';
   parentItem.appendChild(newElement);
 };
 
 const renderErrorSubmit = (tagId) => {
   const parentItem = document.querySelector(`#${tagId}`);
-  parentItem.textContent = `Ops!, we find an error, please tray again in a few minutes`;
+  parentItem.textContent = 'Ops!, we find an error, please tray again in a few minutes';
 };
 
 export { renderList, renderErrorLoad, renderErrorSubmit };
