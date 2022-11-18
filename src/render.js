@@ -5,9 +5,18 @@ const renderList = (myList, tagId) => {
   parentItem.textContent = '';
   myList.forEach((scoreItem) => {
     const newElement = document.createElement('li');
+    newElement.className = 'list-item';
     newElement.textContent = `${scoreItem.user}: ${scoreItem.score}`;
     parentItem.appendChild(newElement);
   });
 };
 
-export default renderList;
+const renderErrorLoad = (err, tagId) => {
+  const parentItem = document.querySelector(`#${tagId}`);
+  const newElement = document.createElement('li');
+  newElement.className = 'list-item';
+  newElement.textContent = `Ops!, we find an error [${err.status}], please tray again in a few minutes`;
+  parentItem.appendChild(newElement);
+}
+
+export { renderList, renderErrorLoad };

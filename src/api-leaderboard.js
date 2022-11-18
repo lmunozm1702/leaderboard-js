@@ -10,8 +10,12 @@ const getScoresApi = async () => {
       'Access-Control-Allow-Credentials': 'true',
     },
   });
-  const result = await response.json();
-  return result;
+  if (response.ok) {
+    const result = await response.json();
+    return result;
+  } else {
+    return Promise.reject(response);
+  }
 };
 
 const saveScoresApi = async (data) => {
@@ -23,12 +27,15 @@ const saveScoresApi = async (data) => {
       'Access-Control-Allow-Credentials': 'true',
     },
     body: JSON.stringify({
-      user: `"${data.fullName}"`,
+      user: data.fullName,
       score: data.score,
     }),
   });
-  const result = await response.json();
-  return result;
+  if (response.ok) {
+    const result = await response.json();
+    return result;
+  }
+  return Promise.reject(response.status);
 };
 
 export { saveScoresApi, getScoresApi };

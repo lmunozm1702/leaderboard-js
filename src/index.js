@@ -1,7 +1,7 @@
 import _ from 'lodash'; // eslint-disable-line no-unused-vars
 import './style.css';
 import Scores from './scores.js';
-import renderList from './render.js';
+import { renderList } from './render.js';
 import { getScoresApi } from './api-leaderboard.js';
 
 const addButton = document.querySelector('#add-button');
@@ -15,6 +15,8 @@ addButton.addEventListener('click', async (event) => {
   if ((fullNameInput.value !== '') && (scoreInput.value !== '')) {
     event.preventDefault();
     await myScores.add(fullNameInput.value, scoreInput.value);
+    fullNameInput.value = '';
+    scoreInput.value = '';
   }
 });
 
