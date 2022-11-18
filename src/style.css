@@ -15,7 +15,7 @@ input {
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   color: tomato;
   background-color: white;
   min-height: 100vh;

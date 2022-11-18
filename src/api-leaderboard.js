@@ -9,13 +9,13 @@ const getScoresApi = async () => {
       'access-control-allow-origin': '*',
       'Access-Control-Allow-Credentials': 'true',
     },
-  });
+  })
   if (response.ok) {
     const result = await response.json();
-    return result;
-  } else {
-    return Promise.reject(response);
+    return (result);
   }
+  console.error("GET: [ /scores/ ]", response);
+  return (false);
 };
 
 const saveScoresApi = async (data) => {
@@ -33,9 +33,10 @@ const saveScoresApi = async (data) => {
   });
   if (response.ok) {
     const result = await response.json();
-    return result;
+    return (result);
   }
-  return Promise.reject(response.status);
+  console.error("POST: [ /scores/ ]", response);
+  return (false);
 };
 
 export { saveScoresApi, getScoresApi };
